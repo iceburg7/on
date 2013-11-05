@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>append Example</title>
+		<title>Turn on the lights.</title>
 		<script src="http://code.jquery.com/jquery-latest.js"></script>
 		<script>
 			$(document).ready(function(){
@@ -57,9 +57,20 @@
 				});
 				
 				
-				$(".lightsOff").click(function(){
+				$(".lightsOff1").click(function(){
 					
-					$(".lights").removeClass("hide");
+					if(lightValue > 2) {
+						$(".lights").addClass("lights4");
+					};
+					
+				});
+				
+				$(".flare").click(function(){
+					
+					if(lightValue === 4) {
+						$(".wrapper").removeClass("light");
+						$(".wrapper").addClass("bright");
+					}
 					
 				});
 				
@@ -143,6 +154,32 @@
 				-webkit-transition:top 5s;
 			}
 			
+			.flare {
+				width:100px;
+				height:100px;
+				position:absolute;
+				left:700px;
+				top:100px;
+			}
+			
+			.lightsOff1 {
+				width:150px;
+				height:250px;
+				
+				position:absolute;
+				left:70px;
+				top:400px;
+			}
+			
+			.lightsOff2 {
+				width:30px;
+				height:40px;
+				
+				position:absolute;
+				left:690px;
+				top:530px;
+			}
+			
 			
 			
 			
@@ -162,6 +199,11 @@
 			
 			.dimText {
 				color:#2c3574;
+			}
+			
+			.bright {
+				background-color:#faf7df;
+				-webkit-transition:background-color 5s;
 			}
 			
 			.brightText {
@@ -201,6 +243,11 @@
 				background-repeat:no-repeat;
 			}
 			
+			.lights4 {
+				background-image:url(images/lights4.png);
+				background-repeat:no-repeat;
+			}
+			
 			.rise {
 				top:100px;
 			}
@@ -232,7 +279,13 @@
 					<div class="sun">
 					</div>
 					
-					<div class="lightsOff">
+					<div class="lightsOff1">
+					</div>
+					
+					<div class="lightsOff2">
+					</div>
+					
+					<div class="flare">
 					</div>
 					
 					
